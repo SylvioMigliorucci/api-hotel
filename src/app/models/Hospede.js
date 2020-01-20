@@ -1,15 +1,19 @@
 import Sequelize, {Model } from 'sequelize';
-class User extends Model {
+import Checkin from './Checkin';
+class Hospede extends Model {
     static init(sequelize) {
       super.init(
         {
           nome: Sequelize.STRING,
+          documento: Sequelize.STRING,
+          telefone: Sequelize.STRING,
         },
         {
           sequelize,
         }
       );
   
+    //   this.belongsTo(Checkin);
  
       return this;
     }
@@ -17,4 +21,4 @@ class User extends Model {
 
   }
   
-  export default User;    
+  export default Hospede;    
